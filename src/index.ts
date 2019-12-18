@@ -14,7 +14,11 @@ function generateFakeFromJSON(input): Object {
   }
   return outputObject;
 }
-
+/**
+ * @function fakeTypeGenerator
+ * @description generate fake info according to provided typw
+ * @param type {string} what type to fake
+ */
 function fakeTypeGenerator(type: string) {
   const isFakeApi: boolean = type.includes("faker");
   if (isFakeApi) {
@@ -24,6 +28,7 @@ function fakeTypeGenerator(type: string) {
       fakerMethods.shift(); /* remove faker */
       const FMLength = fakerMethods.length;
       return fakerMethods.reduce((augFunc, currenItem, index) => {
+        /* run faker api dynamicly and call argument in last element */
         if (index === FMLength - 1) {
           return augFunc[handleLastMethod(currenItem)](
             handleCurlyBraces(currenItem)
@@ -34,7 +39,11 @@ function fakeTypeGenerator(type: string) {
     }
   }
 }
-
+/**
+ * @function handleLastMethod
+ * @description extract last method string (get srt before paranteces) 
+ * @param methodStr {string} last method string
+ */
 function handleLastMethod(methodStr: string) {
   const hasParanteses = methodStr.includes("(");
   if (hasParanteses) {
@@ -43,6 +52,11 @@ function handleLastMethod(methodStr: string) {
   }
   return methodStr;
 }
+/**
+ * @function handleCurlyBraces
+ * @description find out which kind of argument has been pass to the function(last string)
+ * @param methodStr 
+ */
 function handleCurlyBraces(methodStr: string) {
   const hasCurly: boolean = methodStr.includes("(");
   if (hasCurly) {
