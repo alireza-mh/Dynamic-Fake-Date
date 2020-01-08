@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prepublishOnly": "tsc main.ts",
+    "prepublishOnly": "tsc src/index.ts",
+    "prepareSite": "tsc src/index.ts --outDir ./site",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
