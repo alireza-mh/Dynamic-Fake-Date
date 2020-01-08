@@ -79,10 +79,3 @@ function handleCurlyBraces(methodStr: string) {
   }
   return "";
 }
-console.log(
-  "Test cases",
-  generateFakeFromJSON({
-    name: "faker.random.number(600)",
-    name2: "faker.name.findName"
-  })
-);
