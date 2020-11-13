@@ -1,0 +1,23 @@
+{
+  "name": "dynamic-fake-data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "prepublishOnly": "tsc src/index.ts",
+    "prepareSite": "tsc src/index.ts --outDir ./lib",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "faker": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/faker": "^4.1.8",
+    "@types/node": "^12.12.17",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3"
+  }
+}

@@ -1,13 +1,15 @@
 const path = require("path");
-
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const nodeExternals = require("webpack-node-externals");
 module.exports = () => ({
   entry: {
-    main: path.resolve(__dirname, "../", "src/index.ts")
+    main: path.resolve(__dirname, "./index.js")
   },
   output: {
     filename: "[name].js",
     path: path.resolve(__dirname)
   },
+
   module: {
     rules: [
       {
@@ -19,5 +21,10 @@ module.exports = () => ({
   resolve: {
     extensions: [".ts", ".js", ".json"]
   },
-  plugins: []
+  target: 'web',
+  plugins: [
+    new HTMLWebpackPlugin({
+      template: './public/index.html'
+    })
+  ]
 });
