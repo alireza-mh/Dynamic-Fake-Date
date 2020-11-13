@@ -1,23 +1,35 @@
 {
-  "name": "dynamic-fake-data",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "prepublishOnly": "tsc src/index.ts",
-    "prepareSite": "tsc src/index.ts --outDir ./site",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "faker": "^4.1.0"
-  },
-  "devDependencies": {
-    "@types/faker": "^4.1.8",
-    "@types/node": "^12.12.17",
-    "ts-node": "^8.5.4",
-    "typescript": "^3.7.3"
+    "name": "dynamic-faker-data",
+    "version": "1.0.0",
+    "description": "Easy JSON dynamic faker",
+    "keywords": [
+      "fake data",
+      "dynamic fake data"
+    ],
+    "license": "MIT",
+    "author": "Alireza Mahmoofi <alireza.mh@gmail.com> (https://github.com/alireza-mh)",
+    "homepage": "https://github.com/alireza-mh/Dynamic-Fake-Date",
+    "repository": "github:alireza-mh/Dynamic-Fake-Date",
+    "private": true,
+    "workspaces": [
+        "dynamic-faker-data-site",
+        "dynamic-fake-data"
+      ],
+    
+    "files": [
+      "dist",
+      "lib",
+      "src",
+      "es"
+    ],
+    "scripts": {
+    },
+ 
+    "dependencies": {
+
+    },
+    "devDependencies": {
+    
+    }
   }
-}
+  

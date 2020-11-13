@@ -79,3 +79,5 @@ function handleCurlyBraces(methodStr: string) {
   }
   return "";
 }
+
+export default generateFakeFromJSON;
