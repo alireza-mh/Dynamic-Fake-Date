@@ -4,21 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- webpack is needed for generate single file and void require here -->
-    <script src="index.js" defer></script>
     <title>Faker Demo site</title>
 </head>
 <body>
-    <form action="" onsubmit="">
+    <div class='faker-form'>
+    <form action="#" onsubmit="submitForm()">
     <textarea id='schemaInput' placeholder="write your schema"></textarea>
     <pre>output</pre>
     <button type="submit">Submit</button>
     </form>
-    <script>
-        function submitForm(){
-            var textArea = document.getElementById("schemaInput");
-            var fakerOutput = textArea.value;
-        }
-    </script>
+
 </body>
 </html>
